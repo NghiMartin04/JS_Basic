@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let daysOfWeek = ["Tue", "Thu", "Sat", "Nine"];
+
+        // Thêm các phần tử "Mon", "We", "Fri", "Sun" vào mảng
+        daysOfWeek.push("Mon", "We", "Fri", "Sun");
+
+        // Xóa phần tử "Nine" 
+        let indexOfNine = daysOfWeek.indexOf("Nine");
+        daysOfWeek.splice(indexOfNine, 1);
+
+        // Định nghĩa một hàm so sánh tùy chỉnh để sắp xếp lại mảng
+        function customSort(a, b) {
+            const daysOrder = ["Mon", "Tue", "We", "Thu", "Fri", "Sat", "Sun"];
+            return daysOrder.indexOf(a) - daysOrder.indexOf(b);
+        }
+
+        // Sắp xếp lại mảng 
+        daysOfWeek = daysOfWeek.sort(customSort);
+
+        // In ra mảng kết quả
+        console.log("Mảng thứ tự ngày trong tuần:", daysOfWeek);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Nhap ho ten
+        let fullName = prompt("Enter your full name:");
+        //Nhap gioi tinh
+        let gender = prompt("Enter gender (Male or Female):");
+        // Chia ho va ten thanh ho,ten dem, ten
+        let nameArray = fullName.split(" ");
+        let firstName = nameArray[0];
+        let middleName = nameArray.slice(1, -1).join(" ");
+        let lastName = nameArray[nameArray.length - 1];
+
+        if (gender === "Male") {
+            middleName = "Van";
+        } else if (gender === "Female") {
+            middleName = "Ve";
+        }
+
+        let newFullName = firstName + " " + middleName + " " + lastName;
+        console.log("New name: " + newFullName);
+    </script>
+</body>
+
+</html>
